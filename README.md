@@ -8,6 +8,7 @@ install all the node packages first
 run the development server on port 3000
 
 #connect authentication apis :
+
 signin - http://localhost:3000/signIn
 
 verify - http://localhost:3000/verify
