@@ -20,6 +20,6 @@ db.once('open', function () {
 	console.log('db connected');
 });
 
-app.listen(3002, function () {
-	console.log('app listening on port 3002!\n');
+app.listen(3001, function () {
+	console.log('app listening on port 3001!\n');
 });

@@ -13,7 +13,8 @@ exports.signin = function signin(req, res, next) {
             return element.username == username;
         });
         if (typeof user == "undefined" || user.password != password) {
-          return res.status(401).end();
+            console.log("user not present in db")
+            return res.status(401).end();
         }
         const token = jwt.sign(
             { username },
@@ -38,7 +39,6 @@ exports.verify = function signin(req, res, next) {
     //var username = req.body.username;
     const token = req.body.token;
     const userid = req.body.userid;
-    console.log(userid)
     const vtoken = jwt.verify(
         token,
         {
@@ -46,9 +46,11 @@ exports.verify = function signin(req, res, next) {
         audience:  userid
     });
     if(!vtoken) {
+        console.log("token not verified")
         return res.status(401).end();
     }
-    res.end()
+    console.log("suc")
+    res.status(200).send(vtoken.sub).end();
 }
 exports.createadmin = function _createadmin(req, res, next) {
     const adminmodel = models.adminmodel;
