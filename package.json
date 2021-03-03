@@ -41,7 +41,7 @@
     "nodemon": "^1.19.1",
     "npm": "^6.9.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
